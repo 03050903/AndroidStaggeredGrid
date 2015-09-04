@@ -737,7 +737,9 @@ public class StaggeredGridView extends ExtendableListView {
         // fix vertical gaps when hitting the top after a rotate
         // only when scrolling back up!
         if (!down) {
-            alignTops();
+            // TRELLO: Skipping this method fixes some oddities with our full-row hack.
+            // TODO: Long-term, we should implement full row capabilities on a stable manner.
+            // alignTops();
         }
     }
 
